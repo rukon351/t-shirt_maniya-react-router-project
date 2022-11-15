@@ -8,22 +8,6 @@ const Home = () => {
     const [tShirts, setTShirts] = useTshirts();
     const [cart, setCart] = useState([]);
 
-    // const handleAddToCart = (selectedItem) => {
-    //     const exists = cart.find(tShirt => tShirt._id === selectedItem._id);
-    //     if (!exists) {
-    //         const newCart = [...cart, selectedItem];
-    //         setCart(newCart);
-    //     }
-    //     else {
-    //         alert('Item already added!')
-    //     }
-    // };
-
-    // const handleRemoveFromCart = (selectedItem) => {
-    //     const rest = cart.filter(tShirt => tShirt._id !== selectedItem._id);
-    //     setCart(rest);
-    // };
-
     const handleAddToCart = (selectedItem) => {
         const exists = cart.find(tShirt => tShirt._id === selectedItem._id);
         if (!exists) {
@@ -31,14 +15,15 @@ const Home = () => {
             setCart(newCart);
         }
         else {
-            alert('This item is added!!')
+            alert('Item already added!!');
         }
     };
 
     const handleRemoveFromCart = (selectedItem) => {
-        const rest = cart.filter(tShirt => tShirt._id !== selectedItem._id);
-        setCart(rest);
-    }
+        const reset = cart.filter(tShirt => tShirt._id !== selectedItem._id);
+        setCart(reset);
+    };
+
 
     return (
         <div className='home-container'>
