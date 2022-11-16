@@ -47,7 +47,7 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
 
             {command}
 
-            {/*  ternary operator condition ? true : false */}
+            {/* ternary operator condition ? true : false  */}
             {cart.length !== 4 ? <p>Keep adding!</p> : <button>Remove all</button>}
             {cart.length === 4 ? <button className='orange'>Review Order</button> : ''}
         </div>
